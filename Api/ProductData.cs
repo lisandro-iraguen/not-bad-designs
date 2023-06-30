@@ -21,13 +21,83 @@ public class ProductData : IProductData
             new Product
             {
                 Id = 1,
-                Name= "SIHST",
-                Description= "Pagina Web de Seguridad e Higiene",
-                Url="https://sihst-638fd.firebaseapp.com/",
-                Image="data/images/sihst.png"
-            },
-         
-        };
+                Name= "test",
+                Description= "test",
+                Url="https://www.google.com.ar",
+                Image="data/images/image (1).jpg"
+			},
+		     new Product
+			{
+				Id = 2,
+				Name= "test",
+				Description= "test",
+				Url="https://www.google.com.ar",
+				Image="data/images/image (2).jpg"
+			}, 
+			new Product
+			{
+				Id = 3,
+				Name= "test",
+				Description= "test",
+				Url="https://www.google.com.ar",
+				Price="100$",
+				Image="data/images/image (3).jpg"
+			},  
+			new Product
+			{
+				Id = 4,
+				Name= "test",
+				Description= "test",
+				Url="https://www.google.com.ar",
+				Price="100$",
+				Image="data/images/image (4).jpg"
+			},  
+			new Product
+			{
+				Id = 5,
+				Name= "test",
+				Description= "test",
+				Price="100$",
+				Url="https://www.google.com.ar",
+				Image="data/images/image (5).jpg"
+			},
+			new Product
+			{
+				Id = 6,
+				Name= "test",
+				Description= "test",
+				Price="100$",
+				Url="https://www.google.com.ar",
+				Image="data/images/image (6).jpg"
+			},
+			new Product
+			{
+				Id = 6,
+				Name= "test",
+				Description= "test",
+				Price="100$",
+				Url="https://www.google.com.ar",
+				Image="data/images/image (6).jpg"
+			},
+			new Product
+			{
+				Id = 7,
+				Name= "test",
+				Description= "test",
+				Price="100$",
+				Url="https://www.google.com.ar",
+				Image="data/images/image (7).jpg"
+			},
+			new Product
+			{
+				Id = 8,
+				Name= "test",
+				Description= "test",
+				Price="100$",
+				Url="https://www.google.com.ar",
+				Image="data/images/image (8).jpg"
+			}
+		};
 
     public Task<Product> AddProduct(Product product)
     {
