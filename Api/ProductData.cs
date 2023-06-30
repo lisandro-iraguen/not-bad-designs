@@ -19,13 +19,14 @@ public class ProductData : IProductData
     private readonly List<Product> products = new List<Product>
         {
             new Product
-            {
+           {
                 Id = 1,
                 Name= "test",
-                Description= "test",
-                Url="https://www.google.com.ar",
-                Image="data/images/image (1).jpg"
-			},
+                Description= "Never Forgive, Never Forget Classic T-Shirt",
+                Price="23.34$",
+                Url="https://www.redbubble.com/i/t-shirt/Never-Forgive-Never-Forget-by-NotBadDesigns/144902526.WFLAH",
+                Image="data/images/image (8).jpg"
+            },
 		     new Product
 			{
 				Id = 2,
