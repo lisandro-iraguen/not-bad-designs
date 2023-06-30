@@ -21,7 +21,7 @@ namespace Api
 
         [FunctionName("PostGet")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "posts")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "products")] HttpRequest req)
         {
             var products = await this._productData.GetProducts();
             return new OkObjectResult(products);

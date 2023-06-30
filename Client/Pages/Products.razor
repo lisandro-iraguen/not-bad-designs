@@ -17,18 +17,37 @@
     }
     else
     {
-        <ul class="list">
 
-            @foreach (var product in products)
-            {
-                <li role="presentation">
-                    <div class="card">
-                        <CardProductContent Name="@product.Name" Description="@product.Description" Url="@product.Url" Image="@product.Image"></CardProductContent>
-                    </div>
-                </li>
-            }
+        <div class="colorlib-product">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 offset-sm-2 text-center colorlib-heading">
+						<h2>Best Sellers</h2>
+					</div>
+				</div>
+				<div class="row row-pb-md">
+					
+					  @foreach (var product in products)
+                        {
+                               <CardProductContent Name="@product.Name" Description="@product.Description" Url="@product.Url" Image="@product.Image" Price="@product.Price"></CardProductContent>
 
-        </ul>
+                        }
+
+
+					
+							
+
+
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p><a href="#" class="btn btn-primary btn-lg">Shop All Products</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
     }
 
 
@@ -36,11 +55,11 @@
 
 @code {
 
-    private IEnumerable<Post> products = null;
+    private IEnumerable<Product> products = null;
 
     protected override async Task OnInitializedAsync()
     {
-        products = await http.GetFromJsonAsync<IEnumerable<Post>>("api/posts");
+        products = await http.GetFromJsonAsync<IEnumerable<Product>>("api/products");
     }
 
 }

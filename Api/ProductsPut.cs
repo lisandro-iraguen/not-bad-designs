@@ -25,7 +25,7 @@ public class ProductsPut
         ILogger log)
     {
         var body = await new StreamReader(req.Body).ReadToEndAsync();
-        var product = JsonSerializer.Deserialize<Post>(body, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+        var product = JsonSerializer.Deserialize<Product>(body, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
 
         var updatedProduct = await productData.UpdateProduct(product);
         return new OkObjectResult(updatedProduct);
