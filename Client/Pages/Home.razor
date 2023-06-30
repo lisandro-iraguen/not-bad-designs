@@ -20,56 +20,31 @@
 	</div>
 <div class="content-container">
 
-	@if (products == null)
-	{
-		<div class="spinner"></div>
-	}
-	else
-	{
-
-		<div class="colorlib-product">
-			<div class="container">
+		<div class="container">
 				<div class="row">
 					<div class="col-sm-8 offset-sm-2 text-center colorlib-heading">
-						<h2>Best Sellers</h2>
+					<a href="https://www.redbubble.com/people/NotBadDesigns/explore?asc=u&page=1&sortOrder=recent"><p><h2 style="color:blue">Explore Designs</h2></p></a>
 					</div>
 				</div>
-				<div class="row row-pb-md">
-
-					@foreach (var product in products)
-					{
-						<CardProductContent Name="@product.Name" Description="@product.Description" Url="@product.Url" Image="@product.Image" Price="@product.Price"></CardProductContent>
-
-					}
-
-
-
-
-
-
-				</div>
+				
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<p><a href="#" class="btn btn-primary btn-lg">Shop All Products</a></p>
+					<p><a href="https://www.redbubble.com/es/people/NotBadDesigns/shop?asc=u" class="btn btn-primary btn-lg" style="background-color:#00b3e6">View My Shop</a></p>
 					</div>
 				</div>
 			</div>
-		</div>
-
-
-	}
 
 
 </div>
 
 @code {
 
-	private IEnumerable<Product> products = null;
+	//private IEnumerable<Product> products = null;
 
-	protected override async Task OnInitializedAsync()
-	{
-		products = await http.GetFromJsonAsync<IEnumerable<Product>>("api/products");
-	}
+	//protected override async Task OnInitializedAsync()
+	//{
+	//	products = await http.GetFromJsonAsync<IEnumerable<Product>>("api/products");
+	//}
 
 }
 
